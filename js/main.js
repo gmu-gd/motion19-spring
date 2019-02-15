@@ -52,30 +52,30 @@ var w = $(window).width() - 50;
 function makeNewPositionA(){
     var nha = Math.floor(Math.random() * h);
     var nwa = Math.floor(Math.random() * w);
-    return [nha,nwa]; 
+    return [nha,nwa];
     $('.bouncey-a').css("top", nha);
-    $('.bouncey-a').css("left", nwa);     
+    $('.bouncey-a').css("left", nwa);
 }
 function makeNewPositionB(){
     var nhb = Math.floor(Math.random() * h);
     var nwb = Math.floor(Math.random() * w);
     return [nhb,nwb];
     $('.bouncey-b').css("top", nhb);
-    $('.bouncey-b').css("left", nwb);      
+    $('.bouncey-b').css("left", nwb);
 }
 function makeNewPositionC(){
     var nhc = Math.floor(Math.random() * h);
     var nwc = Math.floor(Math.random() * w);
     return [nhc,nwc];
     $('.bouncey-c').css("top", nhc);
-    $('.bouncey-c').css("left", nwc);      
+    $('.bouncey-c').css("left", nwc);
 }
 function makeNewPositionD(){
     var nhd = Math.floor(Math.random() * h);
     var nwd = Math.floor(Math.random() * w);
     return [nhd,nwd];
     $('.bouncey-d').css("top", nhd);
-    $('.bouncey-d').css("left", nwd);      
+    $('.bouncey-d').css("left", nwd);
 }
 
 function animateDiv(){
@@ -84,16 +84,16 @@ function animateDiv(){
   var newqc = makeNewPositionC();
   var newqd = makeNewPositionD();
   $('.bouncey-a').animate({ top: newqa[0], left: newqa[1] }, 500, function(){
-    animateDiv();        
+    animateDiv();
   });
   $('.bouncey-b').animate({ top: newqb[0], left: newqb[1] }, 1000, function(){
-    animateDiv();        
+    animateDiv();
   });
   $('.bouncey-c').animate({ top: newqc[0], left: newqc[1] }, 2000, function(){
-    animateDiv();        
+    animateDiv();
   });
   $('.bouncey-d').animate({ top: newqd[0], left: newqd[1] }, 3000, function(){
-    animateDiv();        
+    animateDiv();
   });
   $(window).click(function(){
     $('.bouncey-a').stop();
@@ -104,7 +104,7 @@ function animateDiv(){
 }
 
 function limit(){
-  var limits = ["Remake someone else's video as your video", "Make it in 10 minutes", "Always zooming in", "Must use 10 sound effects from my folder of sound effects", "Must be stop motion", "Must use comic sans", "Must use stock footage", "All analog", "Make it ugly", "Only found things", "Must use photoshop", "Must use only shapes", "No text", "Only text but no words", "No recognizable images", "Background can't be white", "All photos", "At least 3 colors", "At least 2 fonts", "No digital type", "Use 2 After Effects effects", "No presets"];
+  var limits = ["only black and white","no type","no pictures","no black and white","5 demands from neighbor","10 transitions - 1:30","black, white, 1 color","3 typefaces - 1:30","3d","flat design","make it ugly","only stock images","5 self made sfx","all hand done/drawn","stop motion","make it swiss","use 5 ae fx","old book illustration .com","cubism.","no straight lines","must have a photograph of a banana","only outlines or strokes, no fills - 4:30","pixel art - 4:30","the final video is played backwards"];
   var rand = Math.floor(Math.random() * limits.length);
   var limit = limits[rand];
   console.log(rand);
